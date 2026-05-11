@@ -1,0 +1,7 @@
+Bundle-Name: ${project.name}
+Bundle-SymbolicName: ${project.artifactId}
+Export-Package: \
+    org.eclipse.daanse.diagram.core, \
+    org.eclipse.daanse.diagram.core.style, \
+    org.eclipse.daanse.diagram.core.svg, \
+    org.eclipse.daanse.diagram.core.layout

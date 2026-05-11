@@ -1,0 +1,38 @@
+#*******************************************************************************
+# Copyright (c) 2026 Contributors to the Eclipse Foundation
+# SPDX-License-Identifier: EPL-2.0
+#*******************************************************************************
+-metainf-services: auto
+
+-includeresource: \
+    @org.eclipse.elk.alg.layered-${elk.version}.jar, \
+    @org.eclipse.elk.alg.common-${elk.version}.jar, \
+    @org.eclipse.elk.core-${elk.version}.jar, \
+    @org.eclipse.elk.graph-${elk.version}.jar
+
+-conditionalpackage: \
+    com.google.common.*, \
+    com.google.thirdparty.*, \
+    org.eclipse.emf.common.*, \
+    org.eclipse.emf.ecore.*
+
+Export-Package: \
+    org.eclipse.elk.alg.layered.*, \
+    org.eclipse.elk.alg.common.*, \
+    org.eclipse.elk.core.*, \
+    org.eclipse.elk.graph.*
+
+Import-Package: \
+    !com.google.common.*, \
+    !com.google.thirdparty.*, \
+    !com.google.errorprone.*, \
+    !com.google.j2objc.*, \
+    !javax.annotation.*, \
+    !org.checkerframework.*, \
+    !org.jspecify.*, \
+    !org.eclipse.emf.common.*, \
+    !org.eclipse.emf.ecore.*, \
+    *
+
+Bundle-Name: ${project.name}
+Bundle-SymbolicName: ${project.artifactId}

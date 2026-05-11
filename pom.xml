@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*********************************************************************
+* Copyright (c) 2026 Contributors to the Eclipse Foundation.
+*
+* This program and the accompanying materials are made
+* available under the terms of the Eclipse Public License 2.0
+* which is available at https://www.eclipse.org/legal/epl-2.0/
+*
+* SPDX-License-Identifier: EPL-2.0
+**********************************************************************/
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.daanse</groupId>
+    <artifactId>org.eclipse.daanse.pom.parent</artifactId>
+    <version>0.0.7</version>
+  </parent>
+
+  <artifactId>org.eclipse.daanse.diagram</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Eclipse Daanse Diagram</name>
+  <description>Multi-module Java diagram library: an ELK repack bundle,
+        a rendering core, a notation-vocabulary module, and one bundle
+        per diagram kind under kind/* (schema, cwm.*, ecore, rolap).
+  </description>
+
+  <properties>
+    <revision>0.0.1-SNAPSHOT</revision>
+    <maven.compiler.release>25</maven.compiler.release>
+        <!-- Single project-level folder all example tests write their SVGs
+             into. ${session.executionRootDirectory} is the directory mvn was
+             invoked from (= the repo root for top-level builds, = the module
+             root when running mvn inside a single module), so example files
+             always end up beside the pom that drove the build. -->
+    <examples.dir>${session.executionRootDirectory}/examples</examples.dir>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <systemPropertyVariables>
+              <examples.dir>${examples.dir}</examples.dir>
+            </systemPropertyVariables>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>ossrh-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+
+  <modules>
+    <module>org.eclipse.daanse.diagram.repack.elk</module>
+    <module>org.eclipse.daanse.diagram.core</module>
+    <module>org.eclipse.daanse.diagram.notation</module>
+    <!--
+    <module>org.eclipse.daanse.diagram.kind</module>
+    -->
+  </modules>
+</project>
