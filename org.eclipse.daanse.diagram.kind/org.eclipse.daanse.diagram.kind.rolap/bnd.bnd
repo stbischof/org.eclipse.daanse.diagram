@@ -1,0 +1,7 @@
+Bundle-Name: ${project.name}
+Bundle-SymbolicName: ${project.artifactId}
+Export-Package: \
+    org.eclipse.daanse.diagram.kind.rolap.access, \
+    org.eclipse.daanse.diagram.kind.rolap.cube, \
+    org.eclipse.daanse.diagram.kind.rolap.dimension, \
+    org.eclipse.daanse.diagram.kind.rolap.level

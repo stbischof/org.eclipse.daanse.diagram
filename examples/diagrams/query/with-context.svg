@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="817" height="802" viewBox="0 0 817 802">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+.dv-node rect.dv-frame { fill: #fff; stroke: #374151; stroke-width: 1; }
+.dv-node .dv-title { font: 600 13px sans-serif; fill: #111827; }
+.dv-node .dv-sub { font: 400 10px sans-serif; fill: #6b7280; }
+.dv-edge { fill: none; stroke: #374151; stroke-width: 1.2; }
+.dv-edge.fk { stroke: #334155; }
+.dv-edge.inherit { stroke: #16a34a; }
+.dv-edge.dep { stroke: #6b7280; stroke-dasharray: 4 3; }
+.dv-label { font: 400 10px sans-serif; fill: #334155; }
+.dv-cardinality { font: 400 10px sans-serif; fill: #1e293b; }
+.dv-cardinality-bg { fill: #ffffff; }
+
+]]>
+    </style>
+    <marker id="dv-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-arrow-fk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="dv-tri" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#16a34a"/>
+    </marker>
+    <marker id="dv-deco-open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 M0,12 L12,6" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-closed-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-triangle-hollow" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-triangle-filled" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-diamond-hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+    </marker>
+    <marker id="dv-deco-diamond-filled" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M12,6 L0,0 M12,6 L0,12 M12,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-one" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="11" orient="auto-start-reverse">
+      <path d="M6,0 L6,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M7,6 L0,0 M7,6 L0,12 M7,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+      </g>
+    </marker>
+    <marker id="dv-deco-crows-foot-one-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M5,0 L5,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+      </g>
+    </marker>
+  </defs>
+  <g class="diagramvis-body" transform="translate(-4.0,-4.0)">
+    <g class="dv-node dv-schema_25230246" transform="translate(20,20)">
+      <rect x="0" y="0" width="785" height="584" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+      <rect x="0" y="0" width="97.50" height="32" rx="6" ry="6" style="fill:#1f2937;stroke:none"/>
+      <circle cx="16" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(10,10.0)">
+        <path d="M1 3h4l1 1h5v6H1zM1 5h10" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="32" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">SCHEMA</text>
+      <text x="32" y="25" style="font:600 13px sans-serif;fill:#f9fafb">sales</text>
+      <g class="dv-node dv-t_aa5455e" transform="translate(515,108)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="92" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_aa5455e">
+            <rect x="0" y="0" width="200" height="92" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_aa5455e)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#1e3a8a"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="TABLE">
+            <rect x="0.50" y="0.50" width="11" height="11" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="0.50" y1="4.50" x2="11.50" y2="4.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="0.50" y1="8" x2="11.50" y2="8" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="4" y1="0.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="8" y1="0.50" x2="8" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ TABLE</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">customer</text>
+          <g class="dv-pk-icon" transform="translate(3,37)" aria-label="PK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#b45309"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="18" y="46" style="font:600 11px sans-serif">id</text>
+          <text class="dv-col-type" x="172" y="46" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="200" y1="52" y2="52" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="18" y="66" style="font:11px sans-serif">email</text>
+          <text class="dv-col-type" x="172" y="66" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(255)</text>
+          <line x1="0" x2="200" y1="72" y2="72" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="18" y="86" style="font:11px sans-serif">name</text>
+          <text class="dv-col-type" x="172" y="86" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(100)</text>
+          <line x1="0" x2="200" y1="92" y2="92" style="stroke:#e5e7eb;stroke-width:1"/>
+        </g>
+      </g>
+      <g class="dv-node dv-t_75201592" transform="translate(287,312)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="92" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_75201592">
+            <rect x="0" y="0" width="200" height="92" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_75201592)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#1e3a8a"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="TABLE">
+            <rect x="0.50" y="0.50" width="11" height="11" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="0.50" y1="4.50" x2="11.50" y2="4.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="0.50" y1="8" x2="11.50" y2="8" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="4" y1="0.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="8" y1="0.50" x2="8" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ TABLE</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">order_version</text>
+          <g class="dv-pk-icon" transform="translate(3,37)" aria-label="PK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#b45309"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="30" y="46" style="font:600 11px sans-serif">id</text>
+          <text class="dv-col-type" x="172" y="46" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="200" y1="52" y2="52" style="stroke:#e5e7eb;stroke-width:1"/>
+          <g class="dv-pk-icon" transform="translate(3,57)" aria-label="PK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#b45309"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="30" y="66" style="font:600 11px sans-serif">version</text>
+          <text class="dv-col-type" x="172" y="66" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">INT</text>
+          <line x1="0" x2="200" y1="72" y2="72" style="stroke:#e5e7eb;stroke-width:1"/>
+          <g class="dv-fk-icon" transform="translate(15,77)" aria-label="FK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#6b7280"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="30" y="86" style="font:11px sans-serif">customer_id</text>
+          <text class="dv-col-type" x="172" y="86" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="200" y1="92" y2="92" style="stroke:#e5e7eb;stroke-width:1"/>
+        </g>
+      </g>
+      <g class="dv-node dv-t_7726e185" transform="translate(515,220)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="112" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_7726e185">
+            <rect x="0" y="0" width="200" height="112" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_7726e185)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#1e3a8a"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="TABLE">
+            <rect x="0.50" y="0.50" width="11" height="11" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="0.50" y1="4.50" x2="11.50" y2="4.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="0.50" y1="8" x2="11.50" y2="8" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="4" y1="0.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="8" y1="0.50" x2="8" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ TABLE</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">product</text>
+          <g class="dv-pk-icon" transform="translate(3,37)" aria-label="PK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#b45309"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="18" y="46" style="font:600 11px sans-serif">id</text>
+          <text class="dv-col-type" x="163" y="46" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="200" y1="52" y2="52" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="18" y="66" style="font:11px sans-serif">sku</text>
+          <text class="dv-col-type" x="163" y="66" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(32)</text>
+          <line x1="0" x2="200" y1="72" y2="72" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="18" y="86" style="font:11px sans-serif">name</text>
+          <text class="dv-col-type" x="163" y="86" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(100)</text>
+          <line x1="0" x2="200" y1="92" y2="92" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="18" y="106" style="font:11px sans-serif">active</text>
+          <text class="dv-col-type" x="163" y="106" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BOOLEAN</text>
+          <line x1="0" x2="200" y1="112" y2="112" style="stroke:#e5e7eb;stroke-width:1"/>
+        </g>
+      </g>
+      <g class="dv-node dv-t_282308c3" transform="translate(515,352)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="112" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_282308c3">
+            <rect x="0" y="0" width="200" height="112" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_282308c3)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#1e3a8a"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="TABLE">
+            <rect x="0.50" y="0.50" width="11" height="11" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="0.50" y1="4.50" x2="11.50" y2="4.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="0.50" y1="8" x2="11.50" y2="8" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="4" y1="0.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="8" y1="0.50" x2="8" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ TABLE</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">order_line</text>
+          <g class="dv-pk-icon" transform="translate(3,37)" aria-label="PK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#b45309"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <g class="dv-fk-icon" transform="translate(15,37)" aria-label="FK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#6b7280"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="30" y="46" style="font:600 11px sans-serif">order_id</text>
+          <text class="dv-col-type" x="170" y="46" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="200" y1="52" y2="52" style="stroke:#e5e7eb;stroke-width:1"/>
+          <g class="dv-pk-icon" transform="translate(3,57)" aria-label="PK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#b45309"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#f59e0b;stroke:#b45309;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <g class="dv-fk-icon" transform="translate(15,57)" aria-label="FK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#6b7280"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="30" y="66" style="font:600 11px sans-serif">order_version</text>
+          <text class="dv-col-type" x="170" y="66" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">INT</text>
+          <line x1="0" x2="200" y1="72" y2="72" style="stroke:#e5e7eb;stroke-width:1"/>
+          <g class="dv-fk-icon" transform="translate(15,77)" aria-label="FK">
+            <circle cx="2.60" cy="5" r="2.40" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6"/>
+            <circle cx="2.60" cy="5" r="0.90" style="fill:#6b7280"/>
+            <path d="M5 4.2 L10 4.2 L10 6 L9 6 L9 5 L8 5 L8 6 L5 6 Z" style="fill:#d1d5db;stroke:#6b7280;stroke-width:0.6;stroke-linejoin:round"/>
+          </g>
+          <text class="dv-col-name" x="30" y="86" style="font:11px sans-serif">product_id</text>
+          <text class="dv-col-type" x="170" y="86" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="200" y1="92" y2="92" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="30" y="106" style="font:11px sans-serif">qty</text>
+          <text class="dv-col-type" x="170" y="106" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">INT</text>
+          <line x1="0" x2="200" y1="112" y2="112" style="stroke:#e5e7eb;stroke-width:1"/>
+        </g>
+      </g>
+      <g class="dv-node dv-t_17f9344b" transform="translate(54.50,510)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="32" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_17f9344b">
+            <rect x="0" y="0" width="200" height="32" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_17f9344b)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#14532d"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#14532d"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="VIEW">
+            <path d="M0 6 Q6 0 12 6 Q6 12 0 6 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ VIEW</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">v_customer_summary</text>
+        </g>
+      </g>
+      <g class="dv-node dv-t_d4ab71a" transform="translate(50,248)">
+        <rect class="dv-frame" x="0" y="0" width="209" height="152" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_d4ab71a">
+            <rect x="0" y="0" width="209" height="152" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_d4ab71a)">
+          <rect class="dv-title-bar" x="0" y="0" width="209" height="32" rx="4" ry="4" style="fill:#0f766e"/>
+          <rect x="0" y="28" width="209" height="4" style="fill:#0f766e"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="QUERY_COLUMN_SET">
+            <rect x="0.50" y="4.50" width="7" height="7" style="fill:none;stroke:#f9fafb;stroke-width:0.9"/>
+            <line x1="0.50" y1="8" x2="7.50" y2="8" style="stroke:#f9fafb;stroke-width:0.7"/>
+            <line x1="4" y1="4.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.7"/>
+            <circle cx="8" cy="4" r="2.60" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="10" y1="6" x2="12" y2="8" style="stroke:#f9fafb;stroke-width:1.2"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ QUERY COLUMN SET</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">customer_order_summary</text>
+          <text class="dv-col-name" x="12" y="46" style="font:11px sans-serif">name</text>
+          <text class="dv-col-type" x="195" y="46" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(100)</text>
+          <line x1="0" x2="209" y1="52" y2="52" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="12" y="66" style="font:11px sans-serif">email</text>
+          <text class="dv-col-type" x="195" y="66" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(255)</text>
+          <line x1="0" x2="209" y1="72" y2="72" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="12" y="86" style="font:11px sans-serif">sku</text>
+          <text class="dv-col-type" x="195" y="86" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(32)</text>
+          <line x1="0" x2="209" y1="92" y2="92" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="12" y="106" style="font:11px sans-serif">product_name</text>
+          <text class="dv-col-type" x="195" y="106" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">VARCHAR(100)</text>
+          <line x1="0" x2="209" y1="112" y2="112" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="12" y="126" style="font:11px sans-serif">qty</text>
+          <text class="dv-col-type" x="195" y="126" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">INT</text>
+          <line x1="0" x2="209" y1="132" y2="132" style="stroke:#e5e7eb;stroke-width:1"/>
+          <text class="dv-col-name" x="12" y="146" style="font:11px sans-serif">product_id</text>
+          <text class="dv-col-type" x="195" y="146" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">BIGINT</text>
+          <line x1="0" x2="209" y1="152" y2="152" style="stroke:#e5e7eb;stroke-width:1"/>
+        </g>
+      </g>
+    </g>
+    <g class="dv-node dv-schema_27f0ad19" transform="translate(296.50,644)">
+      <rect x="0" y="0" width="232" height="146" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+      <rect x="0" y="0" width="127.50" height="32" rx="6" ry="6" style="fill:#1f2937;stroke:none"/>
+      <circle cx="16" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(10,10.0)">
+        <path d="M1 3h4l1 1h5v6H1zM1 5h10" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="32" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">SCHEMA</text>
+      <text x="32" y="25" style="font:600 13px sans-serif;fill:#f9fafb">warehouse</text>
+      <g class="dv-node dv-t_54e81b21" transform="translate(16,46)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="32" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_54e81b21">
+            <rect x="0" y="0" width="200" height="32" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_54e81b21)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#1e3a8a"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="TABLE">
+            <rect x="0.50" y="0.50" width="11" height="11" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="0.50" y1="4.50" x2="11.50" y2="4.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="0.50" y1="8" x2="11.50" y2="8" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="4" y1="0.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="8" y1="0.50" x2="8" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ TABLE</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">inventory</text>
+        </g>
+      </g>
+      <g class="dv-node dv-t_6650813a" transform="translate(16,98)">
+        <rect class="dv-frame" x="0" y="0" width="200" height="32" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-t_6650813a">
+            <rect x="0" y="0" width="200" height="32" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-t_6650813a)">
+          <rect class="dv-title-bar" x="0" y="0" width="200" height="32" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="28" width="200" height="4" style="fill:#1e3a8a"/>
+          <circle cx="14" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+          <g class="dv-header-icon" transform="translate(8,10)" aria-label="TABLE">
+            <rect x="0.50" y="0.50" width="11" height="11" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="0.50" y1="4.50" x2="11.50" y2="4.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="0.50" y1="8" x2="11.50" y2="8" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="4" y1="0.50" x2="4" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+            <line x1="8" y1="0.50" x2="8" y2="11.50" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text class="dv-kind" x="28" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">COLUMN SET ▸ TABLE</text>
+          <text class="dv-title" x="28" y="25" style="fill:#f9fafb">pg_stat_inventory</text>
+          <rect class="dv-sys-pill" x="158" y="8" width="34" height="16" rx="8" ry="8" style="fill:#fde68a;stroke:#b45309;stroke-width:1.2"/>
+          <text class="dv-sys-label" x="175" y="20" text-anchor="middle" style="font:700 10px sans-serif;fill:#7c2d12;letter-spacing:0.6px">SYS</text>
+        </g>
+      </g>
+    </g>
+    <path class="dv-edge dep" d="M739,210 L789,210 L789,81 L36,81 L36,310 L66,310" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="395.40" y="76" style="fill:#6b7280">name</text>
+    <path class="dv-edge dep" d="M739,190 L749,190 L749,92 L46,92 L46,330 L66,330" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="392.50" y="105" style="fill:#6b7280">email</text>
+    <path class="dv-edge dep" d="M739,302 L769,302 L769,572 L36,572 L36,350 L66,350" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="398.30" y="585" style="fill:#6b7280">sku</text>
+    <path class="dv-edge dep" d="M739,322 L779,322 L779,118 L56,118 L56,370 L66,370" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="372.20" y="131" style="fill:#6b7280">product_name</text>
+    <path class="dv-edge dep" d="M739,474 L759,474 L759,520 L46,520 L46,390 L66,390" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="398.30" y="533" style="fill:#6b7280">qty</text>
+    <path class="dv-edge dep" d="M739,454 L749,454 L749,494 L56,494 L56,410 L66,410" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="378" y="507" style="fill:#6b7280">product_id</text>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,374 L303,374" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,342 L531,342" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,190 L531,190" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L521,434 L521,474 L531,474" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,414 L531,414" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L531,434" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L531,282" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,394 L303,394" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,170 L531,170" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,322 L531,322" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L521,434 L521,454 L531,454" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,302 L531,302" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,414 L303,414" marker-end="url(#dv-arrow)"/>
+    <path class="dv-edge dep" d="M174.50,424 L174.50,434 L293,434 L293,282 L521,282 L521,210 L531,210" marker-end="url(#dv-arrow)"/>
+  </g>
+</svg>

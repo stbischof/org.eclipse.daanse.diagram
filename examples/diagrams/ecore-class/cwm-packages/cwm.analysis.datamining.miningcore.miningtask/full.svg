@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1347.50" height="697" viewBox="0 0 1347.50 697">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+.dv-node rect.dv-frame { fill: #fff; stroke: #374151; stroke-width: 1; }
+.dv-node .dv-title { font: 600 13px sans-serif; fill: #111827; }
+.dv-node .dv-sub { font: 400 10px sans-serif; fill: #6b7280; }
+.dv-edge { fill: none; stroke: #374151; stroke-width: 1.2; }
+.dv-edge.fk { stroke: #334155; }
+.dv-edge.inherit { stroke: #16a34a; }
+.dv-edge.dep { stroke: #6b7280; stroke-dasharray: 4 3; }
+.dv-label { font: 400 10px sans-serif; fill: #334155; }
+.dv-cardinality { font: 400 10px sans-serif; fill: #1e293b; }
+.dv-cardinality-bg { fill: #ffffff; }
+
+]]>
+    </style>
+    <marker id="dv-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-arrow-fk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="dv-tri" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#16a34a"/>
+    </marker>
+    <marker id="dv-deco-open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 M0,12 L12,6" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-closed-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-triangle-hollow" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-triangle-filled" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-diamond-hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+    </marker>
+    <marker id="dv-deco-diamond-filled" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M12,6 L0,0 M12,6 L0,12 M12,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-one" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="11" orient="auto-start-reverse">
+      <path d="M6,0 L6,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M7,6 L0,0 M7,6 L0,12 M7,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+      </g>
+    </marker>
+    <marker id="dv-deco-crows-foot-one-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M5,0 L5,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+      </g>
+    </marker>
+  </defs>
+  <g class="diagramvis-body" transform="translate(-4.0,-4.0)">
+    <g class="dv-node dv-pkg_4c02f50" transform="translate(20,20)">
+      <rect x="0" y="0" width="1315.50" height="665" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+      <rect x="0" y="0" width="437.50" height="42" rx="6" ry="6" style="fill:#ddd6fe;stroke:#7c3aed;stroke-width:1"/>
+      <text x="10" y="12" style="font:400 10px sans-serif;fill:#4c1d95;letter-spacing:0.06em">Package</text>
+      <text x="10" y="25" style="font:600 12px sans-serif;fill:#4c1d95">cwm.analysis.datamining.miningcore.miningtask</text>
+      <text x="10" y="38" style="font:400 9px monospace;fill:#6b21a8">http://www.omg.org/spec/CWM/1.1/analysis/datamining/miningcore/miningtask</text>
+      <g class="dv-node dv-pkg_enum_46577744" transform="translate(22,128)">
+        <rect x="0" y="0" width="260" height="146" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+        <rect x="0" y="0" width="150" height="32" rx="6" ry="6" style="fill:#1f2937;stroke:none"/>
+        <circle cx="16" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+        <g transform="translate(10,10.0)">
+          <path d="M1 2h10v8H1zM2 4h8M2 6h8M2 8h8" style="fill:#ffffff;stroke:none"/>
+        </g>
+        <text x="32" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">ENUMERATIONS</text>
+        <text x="32" y="25" style="font:600 13px sans-serif;fill:#f9fafb">enumerations</text>
+        <g class="dv-node dv-e_510af8e4" transform="translate(20,50)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="80" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_510af8e4">
+              <rect x="0" y="0" width="220" height="80" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_510af8e4)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ApplyOutputOption</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">appendToExisting</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">createNew</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_7807e2bb" transform="translate(306,368)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="96" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_7807e2bb">
+            <rect x="0" y="0" width="220" height="96" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_7807e2bb)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#475569"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#475569"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">abstract Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb;font-style:italic">ApplyContentItem</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">topNthIndex</text>
+          <text x="153" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="191" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(198,48)" aria-label="DEFAULT 1">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 1</title>
+          </g>
+          <rect x="1" y="62" width="218" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="73" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="78" width="218" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="219" y1="96" y2="96" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,82)" aria-label="DEFAULT 1">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 1</title>
+          </g>
+          <text x="18" y="91" style="font:400 10px monospace;fill:#6b7280">1</text>
+          <path d="M211,53 L215,53 L215,87 L211,87" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="211" cy="53" r="1.60" style="fill:#6b7280"/>
+          <circle cx="211" cy="87" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_16c30e11" transform="translate(631,581)">
+        <rect class="dv-frame" x="0" y="0" width="286" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_16c30e11">
+            <rect x="0" y="0" width="286" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_16c30e11)">
+          <rect class="dv-title-bar" x="0" y="0" width="286" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="286" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ApplyOutputItem</text>
+          <rect x="1" y="28" width="284" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="284" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="285" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">applyOutput</text>
+          <text x="216" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningApplyOutput</text>
+          <text x="254" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(256,48)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(270,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_2c1a48d6" transform="translate(42,418)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_2c1a48d6">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_2c1a48d6)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ApplyProbabilityItem</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_6bcf75d4" transform="translate(42,358)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_6bcf75d4">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_6bcf75d4)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ApplyRuleIdItem</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_3c41f6be" transform="translate(42,298)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_3c41f6be">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_3c41f6be)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ApplyScoreItem</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_3a8af40a" transform="translate(306,488)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_3a8af40a">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_3a8af40a)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ApplySourceItem</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_44a84775" transform="translate(945,581)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_44a84775">
+            <rect x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_44a84775)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">MiningApplyOutput</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">item</text>
+          <text x="164" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">ApplyOutputItem</text>
+          <text x="202" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..*</text>
+          <g transform="translate(204,48)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_679e03c2" transform="translate(555,230)">
+        <rect class="dv-frame" x="0" y="0" width="362" height="148" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_679e03c2">
+            <rect x="0" y="0" width="362" height="148" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_679e03c2)">
+          <rect class="dv-title-bar" x="0" y="0" width="362" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="362" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">MiningApplyTask</text>
+          <rect x="1" y="28" width="360" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="360" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="361" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">outputOption</text>
+          <text x="281" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">ApplyOutputOption</text>
+          <text x="319" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(326,48)" aria-label="DEFAULT createNew">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT createNew</title>
+          </g>
+          <rect x="1" y="62" width="360" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="73" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="78" width="360" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="361" y1="96" y2="96" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="91" style="font:400 11px sans-serif">outputAssignment</text>
+          <text x="281" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AttributeAssignmentSet</text>
+          <text x="319" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(346,82)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="96" width="360" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="361" y1="114" y2="114" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="109" style="font:400 11px sans-serif">applyOutput</text>
+          <text x="281" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningApplyOutput</text>
+          <text x="319" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(346,100)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="114" width="360" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="125" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="130" width="360" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="361" y1="148" y2="148" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,134)" aria-label="DEFAULT createNew">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT createNew</title>
+          </g>
+          <text x="18" y="143" style="font:400 10px monospace;fill:#6b7280">createNew</text>
+          <path d="M339,53 L343,53 L343,139 L339,139" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="339" cy="53" r="1.60" style="fill:#6b7280"/>
+          <circle cx="339" cy="139" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_c619ee" transform="translate(554,72)">
+        <rect class="dv-frame" x="0" y="0" width="363" height="134" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_c619ee">
+            <rect x="0" y="0" width="363" height="134" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_c619ee)">
+          <rect class="dv-title-bar" x="0" y="0" width="363" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="363" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">MiningBuildTask</text>
+          <rect x="1" y="28" width="361" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="361" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="362" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">resultModel</text>
+          <text x="307" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningModel</text>
+          <text x="345" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(347,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="361" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="362" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">miningSettings</text>
+          <text x="307" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningFunctionSettings</text>
+          <text x="345" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(347,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="361" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="362" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">validationAssignment</text>
+          <text x="307" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AttributeAssignmentSet</text>
+          <text x="345" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(347,84)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="98" width="361" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="362" y1="116" y2="116" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">settingsAssignment</text>
+          <text x="307" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AttributeAssignmentSet</text>
+          <text x="345" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(347,102)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="116" width="361" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="362" y1="134" y2="134" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="129" style="font:400 11px sans-serif">validationData</text>
+          <text x="307" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">PhysicalData</text>
+          <text x="345" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(347,120)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_46bd6c87" transform="translate(945,441)">
+        <rect class="dv-frame" x="0" y="0" width="344.50" height="116" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_46bd6c87">
+            <rect x="0" y="0" width="344.50" height="116" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_46bd6c87)">
+          <rect class="dv-title-bar" x="0" y="0" width="344.50" height="28" rx="4" ry="4" style="fill:#475569"/>
+          <rect x="0" y="24" width="344.50" height="4" style="fill:#475569"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">abstract Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb;font-style:italic">MiningTask</text>
+          <rect x="1" y="28" width="342.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="342.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="343.50" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">inputModel</text>
+          <text x="274.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningModel</text>
+          <text x="312.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(328.50,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="342.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="343.50" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">inputData</text>
+          <text x="274.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">PhysicalData</text>
+          <text x="312.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(328.50,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="342.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="343.50" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">modelAssignment</text>
+          <text x="274.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AttributeAssignmentSet</text>
+          <text x="312.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(328.50,84)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="98" width="342.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="343.50" y1="116" y2="116" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">schema</text>
+          <text x="274.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Schema</text>
+          <text x="312.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(314.50,102)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(328.50,102)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_4076398b" transform="translate(697,402)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_4076398b">
+            <rect x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_4076398b)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">MiningTransformation</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">procedure</text>
+          <text x="164" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningTask</text>
+          <text x="202" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(204,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path class="dv-edge" d="M436,384 L436,364 L560,364 L560,494 L794,494 L794,597" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M941,654 L961,654" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M172,434 L172,424 L312,424 L312,364 L436,364 L436,384" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M172,374 L172,364 L436,364 L436,384" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M172,314 L172,304 L312,304 L312,364 L436,364 L436,384" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M436,504 L436,494 L794,494 L794,597" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M756,246 L756,236 L1137.25,236 L1137.25,457" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M941,355 L951,355 L951,615 L961,615" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M755.50,88 L755.50,78 L951,78 L951,236 L1137.25,236 L1137.25,457" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M941,475 L961,475" style="stroke:#374151;"/>
+  </g>
+</svg>

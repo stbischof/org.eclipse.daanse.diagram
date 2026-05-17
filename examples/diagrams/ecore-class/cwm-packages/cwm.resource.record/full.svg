@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="571.50" height="592" viewBox="0 0 571.50 592">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+.dv-node rect.dv-frame { fill: #fff; stroke: #374151; stroke-width: 1; }
+.dv-node .dv-title { font: 600 13px sans-serif; fill: #111827; }
+.dv-node .dv-sub { font: 400 10px sans-serif; fill: #6b7280; }
+.dv-edge { fill: none; stroke: #374151; stroke-width: 1.2; }
+.dv-edge.fk { stroke: #334155; }
+.dv-edge.inherit { stroke: #16a34a; }
+.dv-edge.dep { stroke: #6b7280; stroke-dasharray: 4 3; }
+.dv-label { font: 400 10px sans-serif; fill: #334155; }
+.dv-cardinality { font: 400 10px sans-serif; fill: #1e293b; }
+.dv-cardinality-bg { fill: #ffffff; }
+
+]]>
+    </style>
+    <marker id="dv-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-arrow-fk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="dv-tri" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#16a34a"/>
+    </marker>
+    <marker id="dv-deco-open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 M0,12 L12,6" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-closed-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-triangle-hollow" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-triangle-filled" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-diamond-hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+    </marker>
+    <marker id="dv-deco-diamond-filled" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M12,6 L0,0 M12,6 L0,12 M12,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-one" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="11" orient="auto-start-reverse">
+      <path d="M6,0 L6,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M7,6 L0,0 M7,6 L0,12 M7,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+      </g>
+    </marker>
+    <marker id="dv-deco-crows-foot-one-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M5,0 L5,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+      </g>
+    </marker>
+  </defs>
+  <g class="diagramvis-body" transform="translate(-4.0,-4.0)">
+    <g class="dv-node dv-pkg_4f8186a5" transform="translate(20,20)">
+      <rect x="0" y="0" width="539.50" height="560" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+      <rect x="0" y="0" width="294.50" height="42" rx="6" ry="6" style="fill:#ddd6fe;stroke:#7c3aed;stroke-width:1"/>
+      <text x="10" y="12" style="font:400 10px sans-serif;fill:#4c1d95;letter-spacing:0.06em">Package</text>
+      <text x="10" y="25" style="font:600 12px sans-serif;fill:#4c1d95">cwm.resource.record</text>
+      <text x="10" y="38" style="font:400 9px monospace;fill:#6b21a8">http://www.omg.org/spec/CWM/1.1/resource/record</text>
+      <g class="dv-node dv-c_68183f19" transform="translate(283.75,398)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_68183f19">
+            <rect x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_68183f19)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">Field</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">length</text>
+          <text x="178" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="216" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">precision</text>
+          <text x="178" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="216" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="80" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">scale</text>
+          <text x="178" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="216" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_24763d10" transform="translate(26,242)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="132" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_24763d10">
+            <rect x="0" y="0" width="220" height="132" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_24763d10)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">RecordDef</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">fieldDelimiter</text>
+          <text x="164" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">String</text>
+          <text x="202" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">isFixedWidth</text>
+          <text x="164" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="202" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="80" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">textDelimiter</text>
+          <text x="164" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">String</text>
+          <text x="202" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="98" width="218" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="109" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="114" width="218" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="219" y1="132" y2="132" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="127" style="font:400 11px sans-serif">file</text>
+          <text x="164" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">RecordFile</text>
+          <text x="202" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(204,118)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_5a342baf" transform="translate(26,398)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="80" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_5a342baf">
+            <rect x="0" y="0" width="220" height="80" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_5a342baf)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">FixedOffsetField</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">offset</text>
+          <text x="178" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="216" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="218" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="219" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">offsetUnitBits</text>
+          <text x="178" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="216" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_7107a4a3" transform="translate(274,242)">
+        <rect class="dv-frame" x="0" y="0" width="239.50" height="132" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_7107a4a3">
+            <rect x="0" y="0" width="239.50" height="132" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_7107a4a3)">
+          <rect class="dv-title-bar" x="0" y="0" width="239.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="239.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">RecordFile</text>
+          <rect x="1" y="28" width="237.50" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="237.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="238.50" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">isSelfDescribing</text>
+          <text x="183.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="221.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="237.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="238.50" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">recordDelimiter</text>
+          <text x="183.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="221.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="80" width="237.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="238.50" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">skipRecords</text>
+          <text x="183.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Integer</text>
+          <text x="221.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="98" width="237.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="109" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="114" width="237.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="238.50" y1="132" y2="132" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="127" style="font:400 11px sans-serif">record</text>
+          <text x="183.50" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">RecordDef</text>
+          <text x="221.50" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(223.50,118)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_71b3c2a7" transform="translate(26,62)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_71b3c2a7">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_71b3c2a7)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">FieldValue</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_46724526" transform="translate(26,122)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_46724526">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_46724526)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">Record</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_30b0d271" transform="translate(26,502)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_30b0d271">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_30b0d271)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">RecordSet</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_7e4fc391" transform="translate(26,182)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_7e4fc391">
+            <rect x="0" y="0" width="220" height="36" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_7e4fc391)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">Group</text>
+        </g>
+      </g>
+    </g>
+    <path class="dv-edge" d="M270,385 L290,385" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M156,414 L156,404 L413.75,404 L413.75,414" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+  </g>
+</svg>

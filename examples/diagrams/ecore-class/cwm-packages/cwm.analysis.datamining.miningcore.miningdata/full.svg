@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2238" height="2846" viewBox="0 0 2238 2846">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+.dv-node rect.dv-frame { fill: #fff; stroke: #374151; stroke-width: 1; }
+.dv-node .dv-title { font: 600 13px sans-serif; fill: #111827; }
+.dv-node .dv-sub { font: 400 10px sans-serif; fill: #6b7280; }
+.dv-edge { fill: none; stroke: #374151; stroke-width: 1.2; }
+.dv-edge.fk { stroke: #334155; }
+.dv-edge.inherit { stroke: #16a34a; }
+.dv-edge.dep { stroke: #6b7280; stroke-dasharray: 4 3; }
+.dv-label { font: 400 10px sans-serif; fill: #334155; }
+.dv-cardinality { font: 400 10px sans-serif; fill: #1e293b; }
+.dv-cardinality-bg { fill: #ffffff; }
+
+]]>
+    </style>
+    <marker id="dv-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-arrow-fk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="dv-tri" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#16a34a"/>
+    </marker>
+    <marker id="dv-deco-open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 M0,12 L12,6" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-closed-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-triangle-hollow" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-triangle-filled" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-diamond-hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+    </marker>
+    <marker id="dv-deco-diamond-filled" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M12,6 L0,0 M12,6 L0,12 M12,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-one" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="11" orient="auto-start-reverse">
+      <path d="M6,0 L6,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M7,6 L0,0 M7,6 L0,12 M7,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+      </g>
+    </marker>
+    <marker id="dv-deco-crows-foot-one-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M5,0 L5,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+      </g>
+    </marker>
+  </defs>
+  <g class="diagramvis-body" transform="translate(-4.0,-4.0)">
+    <g class="dv-node dv-pkg_7f8f120c" transform="translate(20,20)">
+      <rect x="0" y="0" width="2206" height="2814" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+      <rect x="0" y="0" width="437.50" height="42" rx="6" ry="6" style="fill:#ddd6fe;stroke:#7c3aed;stroke-width:1"/>
+      <text x="10" y="12" style="font:400 10px sans-serif;fill:#4c1d95;letter-spacing:0.06em">Package</text>
+      <text x="10" y="25" style="font:600 12px sans-serif;fill:#4c1d95">cwm.analysis.datamining.miningcore.miningdata</text>
+      <text x="10" y="38" style="font:400 9px monospace;fill:#6b21a8">http://www.omg.org/spec/CWM/1.1/analysis/datamining/miningcore/miningdata</text>
+      <g class="dv-node dv-pkg_dts_6137a032" transform="translate(110,2664)">
+        <rect x="0" y="0" width="260" height="128" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+        <rect x="0" y="0" width="127.50" height="32" rx="6" ry="6" style="fill:#1f2937;stroke:none"/>
+        <circle cx="16" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+        <g transform="translate(10,10.0)">
+          <path d="M1 2h10v8H1zM2 4h8M2 6h8M2 8h8" style="fill:#ffffff;stroke:none"/>
+        </g>
+        <text x="32" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">DATATYPES</text>
+        <text x="32" y="25" style="font:600 13px sans-serif;fill:#f9fafb">datatypes</text>
+        <g class="dv-node dv-d_61b2ca5a" transform="translate(20,50)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-d_61b2ca5a">
+              <rect x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-d_61b2ca5a)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#14532d"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#14532d"/>
+            <g transform="translate(10,8)">
+              <rect x="1" y="2" width="10" height="8" style="fill:none;stroke:#f9fafb;stroke-width:1;stroke-dasharray:2 1"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Datatype</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">Double</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e5e7eb"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">INSTANCE CLASS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#f9fafb"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e5e7eb;stroke-width:1"/>
+            <text x="14" y="57" style="font:400 10px monospace;fill:#6b7280">java.lang.String</text>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-pkg_enum_716d4283" transform="translate(105.50,1130)">
+        <rect x="0" y="0" width="269" height="968" rx="6" ry="6" style="fill:#fafafa;stroke:#9ca3af;stroke-width:1;stroke-dasharray:5 3"/>
+        <rect x="0" y="0" width="150" height="32" rx="6" ry="6" style="fill:#1f2937;stroke:none"/>
+        <circle cx="16" cy="16" r="10" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+        <g transform="translate(10,10.0)">
+          <path d="M1 2h10v8H1zM2 4h8M2 6h8M2 8h8" style="fill:#ffffff;stroke:none"/>
+        </g>
+        <text x="32" y="13" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">ENUMERATIONS</text>
+        <text x="32" y="25" style="font:600 13px sans-serif;fill:#f9fafb">enumerations</text>
+        <g class="dv-node dv-e_1c16b2f7" transform="translate(20,190)">
+          <rect class="dv-frame" x="0" y="0" width="229" height="152" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_1c16b2f7">
+              <rect x="0" y="0" width="229" height="152" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_1c16b2f7)">
+            <rect class="dv-title-bar" x="0" y="0" width="229" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="229" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">AttributeSelectionFunction</text>
+            <rect x="1" y="28" width="227" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="227" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="228" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">isNotNull</text>
+            <text x="219" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="227" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="228" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">isNull</text>
+            <text x="219" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+            <rect x="1" y="80" width="227" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="228" y1="98" y2="98" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="93" style="font:400 11px sans-serif">isOne</text>
+            <text x="219" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2</text>
+            <rect x="1" y="98" width="227" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="228" y1="116" y2="116" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="111" style="font:400 11px sans-serif">isZero</text>
+            <text x="219" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">3</text>
+            <rect x="1" y="116" width="227" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="228" y1="134" y2="134" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="129" style="font:400 11px sans-serif">isTrue</text>
+            <text x="219" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">4</text>
+            <rect x="1" y="134" width="227" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="228" y1="152" y2="152" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="147" style="font:400 11px sans-serif">isFalse</text>
+            <text x="219" y="147" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">5</text>
+          </g>
+        </g>
+        <g class="dv-node dv-e_1b10963a" transform="translate(24.50,610)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="116" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_1b10963a">
+              <rect x="0" y="0" width="220" height="116" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_1b10963a)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">AttributeType</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">categorical</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">ordinal</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+            <rect x="1" y="80" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="98" y2="98" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="93" style="font:400 11px sans-serif">numerical</text>
+            <text x="210" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2</text>
+            <rect x="1" y="98" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="116" y2="116" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="111" style="font:400 11px sans-serif">notSpecified</text>
+            <text x="210" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">3</text>
+          </g>
+        </g>
+        <g class="dv-node dv-e_229762ab" transform="translate(24.50,50)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="116" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_229762ab">
+              <rect x="0" y="0" width="220" height="116" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_229762ab)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">OrderType</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">asIs</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">alphabetical</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+            <rect x="1" y="80" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="98" y2="98" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="93" style="font:400 11px sans-serif">numeric</text>
+            <text x="210" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2</text>
+            <rect x="1" y="98" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="116" y2="116" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="111" style="font:400 11px sans-serif">date</text>
+            <text x="210" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">3</text>
+          </g>
+        </g>
+        <g class="dv-node dv-e_2e48f0a1" transform="translate(24.50,750)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_2e48f0a1">
+              <rect x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_2e48f0a1)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">UsageOption</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">active</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">supplementary</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+            <rect x="1" y="80" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="98" y2="98" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="93" style="font:400 11px sans-serif">target</text>
+            <text x="210" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2</text>
+          </g>
+        </g>
+        <g class="dv-node dv-e_7e762feb" transform="translate(24.50,872)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="80" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_7e762feb">
+              <rect x="0" y="0" width="220" height="80" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_7e762feb)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ValueSelectionFunction</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">vsf_value</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">vsf_attribute</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+          </g>
+        </g>
+        <g class="dv-node dv-e_705b4359" transform="translate(24.50,366)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_705b4359">
+              <rect x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_705b4359)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryProperty</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">valid</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">invalid</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+            <rect x="1" y="80" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="98" y2="98" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="93" style="font:400 11px sans-serif">missing</text>
+            <text x="210" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2</text>
+          </g>
+        </g>
+        <g class="dv-node dv-e_5bcc2416" transform="translate(24.50,488)">
+          <rect class="dv-frame" x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+          <defs>
+            <clipPath id="dv-clip-e_5bcc2416">
+              <rect x="0" y="0" width="220" height="98" rx="4" ry="4"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#dv-clip-e_5bcc2416)">
+            <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+            <rect x="0" y="24" width="220" height="4" style="fill:#7c2d12"/>
+            <g transform="translate(10,8)">
+              <path d="M6 0 L1 3 L1 9 L6 12 L11 9 L11 3 Z" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+              <circle cx="6" cy="6" r="2" style="fill:#f9fafb"/>
+            </g>
+            <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Enumeration</text>
+            <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">MatrixProperty</text>
+            <rect x="1" y="28" width="218" height="16" style="fill:#e9d5ff"/>
+            <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">LITERALS</text>
+            <rect x="1" y="44" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="62" y2="62" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="57" style="font:400 11px sans-serif">mp_symmetric</text>
+            <text x="210" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0</text>
+            <rect x="1" y="62" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="80" y2="80" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="75" style="font:400 11px sans-serif">mp_diagonal</text>
+            <text x="210" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1</text>
+            <rect x="1" y="80" width="218" height="18" style="fill:#faf5ff"/>
+            <line x1="1" x2="219" y1="98" y2="98" style="stroke:#e9d5ff;stroke-width:1"/>
+            <text x="10" y="93" style="font:400 11px sans-serif">mp_any</text>
+            <text x="210" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2</text>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_1c1082d9" transform="translate(637,2434)">
+        <rect class="dv-frame" x="0" y="0" width="291.50" height="80" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_1c1082d9">
+            <rect x="0" y="0" width="291.50" height="80" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_1c1082d9)">
+          <rect class="dv-title-bar" x="0" y="0" width="291.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="291.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">AttributeAssignment</text>
+          <rect x="1" y="28" width="289.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="289.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="290.50" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">logicalAttribute</text>
+          <text x="235.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningAttribute</text>
+          <text x="273.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..*</text>
+          <g transform="translate(275.50,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="289.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="290.50" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">orderIdAttribute</text>
+          <text x="235.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="273.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(275.50,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_f905f3e" transform="translate(90.50,664)">
+        <rect class="dv-frame" x="0" y="0" width="299" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_f905f3e">
+            <rect x="0" y="0" width="299" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_f905f3e)">
+          <rect class="dv-title-bar" x="0" y="0" width="299" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="299" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">AttributeAssignmentSet</text>
+          <rect x="1" y="28" width="297" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="297" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="298" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">auxiliaryObject</text>
+          <text x="229" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AuxiliaryObject</text>
+          <text x="267" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(269,48)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(283,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_35da9f7f" transform="translate(135.50,402)">
+        <rect class="dv-frame" x="0" y="0" width="318.50" height="238" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_35da9f7f">
+            <rect x="0" y="0" width="318.50" height="238" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_35da9f7f)">
+          <rect class="dv-title-bar" x="0" y="0" width="318.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="318.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">AttributeUsage</text>
+          <rect x="1" y="28" width="316.50" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="316.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="317.50" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">usage</text>
+          <text x="222.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">UsageOption</text>
+          <text x="260.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(267.50,48)" aria-label="DEFAULT active">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT active</title>
+          </g>
+          <rect x="1" y="62" width="316.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="317.50" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">weight</text>
+          <text x="222.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="260.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(267.50,66)" aria-label="DEFAULT 1.0">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 1.0</title>
+          </g>
+          <rect x="1" y="80" width="316.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="317.50" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">suppressDiscretization</text>
+          <text x="222.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="260.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(267.50,84)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="98" width="316.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="317.50" y1="116" y2="116" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">suppressNormalization</text>
+          <text x="222.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="260.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(267.50,102)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="116" width="316.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="127" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="132" width="316.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="317.50" y1="150" y2="150" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="145" style="font:400 11px sans-serif">attribute</text>
+          <text x="222.50" y="145" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">LogicalAttribute</text>
+          <text x="260.50" y="145" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..*</text>
+          <g transform="translate(302.50,136)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="150" width="316.50" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="161" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="166" width="316.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="317.50" y1="184" y2="184" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,170)" aria-label="DEFAULT active">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT active</title>
+          </g>
+          <text x="18" y="179" style="font:400 10px monospace;fill:#6b7280">active</text>
+          <rect x="1" y="184" width="316.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="317.50" y1="202" y2="202" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,188)" aria-label="DEFAULT 1.0">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 1.0</title>
+          </g>
+          <text x="18" y="197" style="font:400 10px monospace;fill:#6b7280">1.0</text>
+          <rect x="1" y="202" width="316.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="317.50" y1="220" y2="220" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,206)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="215" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <rect x="1" y="220" width="316.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="317.50" y1="238" y2="238" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,224)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="233" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <path d="M280.50,53 L284.50,53 L284.50,175 L280.50,175" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="280.50" cy="53" r="1.60" style="fill:#6b7280"/>
+          <circle cx="280.50" cy="175" r="1.60" style="fill:#6b7280"/>
+          <path d="M280.50,71 L289.50,71 L289.50,193 L280.50,193" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="280.50" cy="71" r="1.60" style="fill:#6b7280"/>
+          <circle cx="280.50" cy="193" r="1.60" style="fill:#6b7280"/>
+          <path d="M280.50,89 L294.50,89 L294.50,211 L280.50,211" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="280.50" cy="89" r="1.60" style="fill:#6b7280"/>
+          <circle cx="280.50" cy="211" r="1.60" style="fill:#6b7280"/>
+          <path d="M280.50,107 L299.50,107 L299.50,229 L280.50,229" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="280.50" cy="107" r="1.60" style="fill:#6b7280"/>
+          <circle cx="280.50" cy="229" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_16f453c9" transform="translate(90.50,1048)">
+        <rect class="dv-frame" x="0" y="0" width="299" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_16f453c9">
+            <rect x="0" y="0" width="299" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_16f453c9)">
+          <rect class="dv-title-bar" x="0" y="0" width="299" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="299" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">AttributeUsageSet</text>
+          <rect x="1" y="28" width="297" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="297" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="298" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">settings</text>
+          <text x="229" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MiningFunctionSettings</text>
+          <text x="267" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(269,48)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(283,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_58a7226e" transform="translate(966.50,892)">
+        <rect class="dv-frame" x="0" y="0" width="312" height="98" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_58a7226e">
+            <rect x="0" y="0" width="312" height="98" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_58a7226e)">
+          <rect class="dv-title-bar" x="0" y="0" width="312" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="312" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoricalAttributeProperties</text>
+          <rect x="1" y="28" width="310" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="310" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="311" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">logicalAttribute</text>
+          <text x="242" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">LogicalAttribute</text>
+          <text x="280" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(282,48)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(296,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="310" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="311" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">taxonomy</text>
+          <text x="242" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryTaxonomy</text>
+          <text x="280" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(296,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="310" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="311" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">category</text>
+          <text x="242" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="280" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(296,84)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_1eacc589" transform="translate(128.75,2348)">
+        <rect class="dv-frame" x="0" y="0" width="222.50" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_1eacc589">
+            <rect x="0" y="0" width="222.50" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_1eacc589)">
+          <rect class="dv-title-bar" x="0" y="0" width="222.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="222.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">DirectAttributeAssignment</text>
+          <rect x="1" y="28" width="220.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="220.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="221.50" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">attribute</text>
+          <text x="166.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="204.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(206.50,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_597cb2f5" transform="translate(482,858)">
+        <rect class="dv-frame" x="0" y="0" width="446.50" height="148" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_597cb2f5">
+            <rect x="0" y="0" width="446.50" height="148" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_597cb2f5)">
+          <rect class="dv-title-bar" x="0" y="0" width="446.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="446.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">LogicalAttribute</text>
+          <rect x="1" y="28" width="444.50" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="444.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="445.50" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">isSetValued</text>
+          <text x="365.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="403.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(410.50,48)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="62" width="444.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="73" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="78" width="444.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="445.50" y1="96" y2="96" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="91" style="font:400 11px sans-serif">categoricalProperties</text>
+          <text x="365.50" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoricalAttributeProperties</text>
+          <text x="403.50" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(430.50,82)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+          <rect x="1" y="96" width="444.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="445.50" y1="114" y2="114" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="109" style="font:400 11px sans-serif">numericalProperties</text>
+          <text x="365.50" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">NumericalAttributeProperties</text>
+          <text x="403.50" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(430.50,100)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+          <rect x="1" y="114" width="444.50" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="125" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="130" width="444.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="445.50" y1="148" y2="148" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,134)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="143" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <path d="M423.50,53 L427.50,53 L427.50,139 L423.50,139" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="423.50" cy="53" r="1.60" style="fill:#6b7280"/>
+          <circle cx="423.50" cy="139" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_5a4e810e" transform="translate(130,2582)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_5a4e810e">
+            <rect x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_5a4e810e)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">LogicalData</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">schema</text>
+          <text x="150" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Schema</text>
+          <text x="188" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(190,48)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(204,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_20120154" transform="translate(966.50,2473)">
+        <rect class="dv-frame" x="0" y="0" width="245" height="80" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_20120154">
+            <rect x="0" y="0" width="245" height="80" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_20120154)">
+          <rect class="dv-title-bar" x="0" y="0" width="245" height="28" rx="4" ry="4" style="fill:#475569"/>
+          <rect x="0" y="24" width="245" height="4" style="fill:#475569"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">abstract Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb;font-style:italic">MiningAttribute</text>
+          <rect x="1" y="28" width="243" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="243" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="244" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">displayName</text>
+          <text x="203" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">String</text>
+          <text x="241" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="243" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="244" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">attributeType</text>
+          <text x="203" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AttributeType</text>
+          <text x="241" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+        </g>
+      </g>
+      <g class="dv-node dv-c_620992a8" transform="translate(112,750)">
+        <rect class="dv-frame" x="0" y="0" width="342" height="274" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_620992a8">
+            <rect x="0" y="0" width="342" height="274" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_620992a8)">
+          <rect class="dv-title-bar" x="0" y="0" width="342" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="342" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">NumericalAttributeProperties</text>
+          <rect x="1" y="28" width="340" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">lowerBound</text>
+          <text x="242" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="280" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">upperBound</text>
+          <text x="242" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="280" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="80" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">isDiscrete</text>
+          <text x="242" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="280" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(301,84)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="98" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="116" y2="116" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">isCyclic</text>
+          <text x="242" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="280" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(301,102)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="116" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="134" y2="134" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="129" style="font:400 11px sans-serif">anchor</text>
+          <text x="242" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="280" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="134" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="152" y2="152" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="147" style="font:400 11px sans-serif">cycleBegin</text>
+          <text x="242" y="147" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="280" y="147" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="152" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="170" y2="170" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="165" style="font:400 11px sans-serif">cycleEnd</text>
+          <text x="242" y="165" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="280" y="165" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="170" width="340" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="341" y1="188" y2="188" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="183" style="font:400 11px sans-serif">discreteStepSize</text>
+          <text x="242" y="183" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="280" y="183" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="188" width="340" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="199" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="204" width="340" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="341" y1="222" y2="222" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="217" style="font:400 11px sans-serif">logicalAttribute</text>
+          <text x="242" y="217" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">LogicalAttribute</text>
+          <text x="280" y="217" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(282,208)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(326,208)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="222" width="340" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="233" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="238" width="340" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="341" y1="256" y2="256" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,242)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="251" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <rect x="1" y="256" width="340" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="341" y1="274" y2="274" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,260)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="269" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <path d="M314,89 L318,89 L318,247 L314,247" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="314" cy="89" r="1.60" style="fill:#6b7280"/>
+          <circle cx="314" cy="247" r="1.60" style="fill:#6b7280"/>
+          <path d="M314,107 L323,107 L323,265 L314,265" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="314" cy="107" r="1.60" style="fill:#6b7280"/>
+          <circle cx="314" cy="265" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_6a938034" transform="translate(590.75,720)">
+        <rect class="dv-frame" x="0" y="0" width="229" height="114" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_6a938034">
+            <rect x="0" y="0" width="229" height="114" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_6a938034)">
+          <rect class="dv-title-bar" x="0" y="0" width="229" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="229" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">OrdinalAttributeProperties</text>
+          <rect x="1" y="28" width="227" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="227" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="228" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">orderType</text>
+          <text x="162" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">OrderType</text>
+          <text x="200" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="227" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="228" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">isCyclic</text>
+          <text x="162" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="200" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(207,66)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="80" width="227" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="91" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="96" width="227" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="228" y1="114" y2="114" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,100)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="109" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <path d="M220,71 L224,71 L224,105 L220,105" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="220" cy="71" r="1.60" style="fill:#6b7280"/>
+          <circle cx="220" cy="105" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_9c53820" transform="translate(130,316)">
+        <rect class="dv-frame" x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_9c53820">
+            <rect x="0" y="0" width="220" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_9c53820)">
+          <rect class="dv-title-bar" x="0" y="0" width="220" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="220" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">PhysicalData</text>
+          <rect x="1" y="28" width="218" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="218" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="219" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">source</text>
+          <text x="164" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Class</text>
+          <text x="202" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(204,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_78171169" transform="translate(120.25,2226)">
+        <rect class="dv-frame" x="0" y="0" width="239.50" height="98" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_78171169">
+            <rect x="0" y="0" width="239.50" height="98" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_78171169)">
+          <rect class="dv-title-bar" x="0" y="0" width="239.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="239.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">PivotAttributeAssignment</text>
+          <rect x="1" y="28" width="237.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="237.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="238.50" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">setIdAttribute</text>
+          <text x="183.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="221.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(223.50,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="237.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="238.50" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">nameAttribute</text>
+          <text x="183.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="221.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(223.50,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="237.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="238.50" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">valueAttribute</text>
+          <text x="183.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="221.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(223.50,84)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_fcaf12a" transform="translate(26,2444)">
+        <rect class="dv-frame" x="0" y="0" width="428" height="114" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_fcaf12a">
+            <rect x="0" y="0" width="428" height="114" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_fcaf12a)">
+          <rect class="dv-title-bar" x="0" y="0" width="428" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="428" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">ReversePivotAttributeAssignment</text>
+          <rect x="1" y="28" width="426" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="426" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="427" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">attributeSelectionFunction</text>
+          <text x="372" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">AttributeSelectionFunction</text>
+          <text x="410" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="426" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="427" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">valueSelectionFunction</text>
+          <text x="372" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">ValueSelectionFunction</text>
+          <text x="410" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="80" width="426" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="91" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="96" width="426" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="427" y1="114" y2="114" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="109" style="font:400 11px sans-serif">selectorAttribute</text>
+          <text x="372" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="410" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..*</text>
+          <g transform="translate(412,100)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_280f0c37" transform="translate(117,2122)">
+        <rect class="dv-frame" x="0" y="0" width="246" height="80" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_280f0c37">
+            <rect x="0" y="0" width="246" height="80" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_280f0c37)">
+          <rect class="dv-title-bar" x="0" y="0" width="246" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="246" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">SetAttributeAssignment</text>
+          <rect x="1" y="28" width="244" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">setIdAttribute</text>
+          <text x="190" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="228" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(230,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">memberAttribute</text>
+          <text x="190" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="228" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(230,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_4cdc345f" transform="translate(1704.50,565)">
+        <rect class="dv-frame" x="0" y="0" width="465.50" height="220" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_4cdc345f">
+            <rect x="0" y="0" width="465.50" height="220" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_4cdc345f)">
+          <rect class="dv-title-bar" x="0" y="0" width="465.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="465.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">Category</text>
+          <rect x="1" y="28" width="463.50" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="463.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="464.50" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">value</text>
+          <text x="365.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Any</text>
+          <text x="403.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="463.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="464.50" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">isNullCategory</text>
+          <text x="365.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="403.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(424.50,66)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="80" width="463.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="464.50" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">displayName</text>
+          <text x="365.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">String</text>
+          <text x="403.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="98" width="463.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="464.50" y1="116" y2="116" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">property</text>
+          <text x="365.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryProperty</text>
+          <text x="403.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(424.50,102)" aria-label="DEFAULT valid">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT valid</title>
+          </g>
+          <rect x="1" y="116" width="463.50" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="464.50" y1="134" y2="134" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="129" style="font:400 11px sans-serif">prior</text>
+          <text x="365.50" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="403.50" y="129" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="134" width="463.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="145" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="150" width="463.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="464.50" y1="168" y2="168" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="163" style="font:400 11px sans-serif">categoricalProperties</text>
+          <text x="365.50" y="163" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoricalAttributeProperties</text>
+          <text x="403.50" y="163" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(405.50,154)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(449.50,154)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="168" width="463.50" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="179" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="184" width="463.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="464.50" y1="202" y2="202" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,188)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="197" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <rect x="1" y="202" width="463.50" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="464.50" y1="220" y2="220" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,206)" aria-label="DEFAULT valid">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT valid</title>
+          </g>
+          <text x="18" y="215" style="font:400 10px monospace;fill:#6b7280">valid</text>
+          <path d="M437.50,71 L441.50,71 L441.50,193 L437.50,193" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="437.50" cy="71" r="1.60" style="fill:#6b7280"/>
+          <circle cx="437.50" cy="193" r="1.60" style="fill:#6b7280"/>
+          <path d="M437.50,107 L446.50,107 L446.50,211 L437.50,211" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="437.50" cy="107" r="1.60" style="fill:#6b7280"/>
+          <circle cx="437.50" cy="211" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_69e4e90b" transform="translate(1704.50,897)">
+        <rect class="dv-frame" x="0" y="0" width="290" height="166" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_69e4e90b">
+            <rect x="0" y="0" width="290" height="166" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_69e4e90b)">
+          <rect class="dv-title-bar" x="0" y="0" width="290" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="290" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMap</text>
+          <rect x="1" y="28" width="288" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="288" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="289" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">isMultiLevel</text>
+          <text x="190" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="228" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(249,48)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="62" width="288" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="289" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">isItemMap</text>
+          <text x="190" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Boolean</text>
+          <text x="228" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(249,66)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <rect x="1" y="80" width="288" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="91" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="96" width="288" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="289" y1="114" y2="114" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="109" style="font:400 11px sans-serif">taxonomy</text>
+          <text x="190" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryTaxonomy</text>
+          <text x="228" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(230,100)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(274,100)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="114" width="288" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="125" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="130" width="288" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="289" y1="148" y2="148" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,134)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="143" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <rect x="1" y="148" width="288" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="289" y1="166" y2="166" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,152)" aria-label="DEFAULT false">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT false</title>
+          </g>
+          <text x="18" y="161" style="font:400 10px monospace;fill:#6b7280">false</text>
+          <path d="M262,53 L266,53 L266,139 L262,139" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="262" cy="53" r="1.60" style="fill:#6b7280"/>
+          <circle cx="262" cy="139" r="1.60" style="fill:#6b7280"/>
+          <path d="M262,71 L271,71 L271,157 L262,157" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="262" cy="71" r="1.60" style="fill:#6b7280"/>
+          <circle cx="262" cy="157" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_293af2f1" transform="translate(1013,508)">
+        <rect class="dv-frame" x="0" y="0" width="265.50" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_293af2f1">
+            <rect x="0" y="0" width="265.50" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_293af2f1)">
+          <rect class="dv-title-bar" x="0" y="0" width="265.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="265.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMapObject</text>
+          <rect x="1" y="28" width="263.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="263.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="264.50" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">entry</text>
+          <text x="209.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryMapObjectEntry</text>
+          <text x="247.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(249.50,48)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_18505320" transform="translate(1364.50,474)">
+        <rect class="dv-frame" x="0" y="0" width="273" height="132" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_18505320">
+            <rect x="0" y="0" width="273" height="132" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_18505320)">
+          <rect class="dv-title-bar" x="0" y="0" width="273" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="273" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMapObjectEntry</text>
+          <rect x="1" y="28" width="271" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="271" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="272" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">graphId</text>
+          <text x="203" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Any</text>
+          <text x="241" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="271" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="73" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="78" width="271" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="272" y1="96" y2="96" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="91" style="font:400 11px sans-serif">mapObject</text>
+          <text x="203" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryMapObject</text>
+          <text x="241" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(243,82)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(257,82)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="96" width="271" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="272" y1="114" y2="114" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="109" style="font:400 11px sans-serif">child</text>
+          <text x="203" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="241" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(257,100)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="114" width="271" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="272" y1="132" y2="132" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="127" style="font:400 11px sans-serif">parent</text>
+          <text x="203" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="241" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..*</text>
+          <g transform="translate(257,118)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_78a6ffe3" transform="translate(1360.25,809)">
+        <rect class="dv-frame" x="0" y="0" width="252.50" height="116" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_78a6ffe3">
+            <rect x="0" y="0" width="252.50" height="116" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_78a6ffe3)">
+          <rect class="dv-title-bar" x="0" y="0" width="252.50" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="252.50" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMapTable</text>
+          <rect x="1" y="28" width="250.50" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="250.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="251.50" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">childAttribute</text>
+          <text x="196.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="234.50" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(236.50,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="250.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="251.50" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">table</text>
+          <text x="196.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Class</text>
+          <text x="234.50" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(236.50,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="250.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="251.50" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">graphIdAttribute</text>
+          <text x="196.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="234.50" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(236.50,84)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="98" width="250.50" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="251.50" y1="116" y2="116" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">parentAttribute</text>
+          <text x="196.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="234.50" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(236.50,102)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_6a24b9e2" transform="translate(1306.50,200)">
+        <rect class="dv-frame" x="0" y="0" width="360" height="238" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_6a24b9e2">
+            <rect x="0" y="0" width="360" height="238" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_6a24b9e2)">
+          <rect class="dv-title-bar" x="0" y="0" width="360" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="360" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMatrix</text>
+          <rect x="1" y="28" width="358" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="358" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="359" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">diagonalDefault</text>
+          <text x="255" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="293" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(314,48)" aria-label="DEFAULT 1.0">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 1.0</title>
+          </g>
+          <rect x="1" y="62" width="358" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="359" y1="80" y2="80" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">offDiagonalDefault</text>
+          <text x="255" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="293" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(314,66)" aria-label="DEFAULT 0.0">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 0.0</title>
+          </g>
+          <rect x="1" y="80" width="358" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="359" y1="98" y2="98" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">kind</text>
+          <text x="255" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">MatrixProperty</text>
+          <text x="293" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <g transform="translate(314,84)" aria-label="DEFAULT mp_any">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT mp_any</title>
+          </g>
+          <rect x="1" y="98" width="358" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="109" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="114" width="358" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="359" y1="132" y2="132" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="127" style="font:400 11px sans-serif">category</text>
+          <text x="255" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="293" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">2..*</text>
+          <g transform="translate(344,118)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="132" width="358" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="359" y1="150" y2="150" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="145" style="font:400 11px sans-serif">schema</text>
+          <text x="255" y="145" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Schema</text>
+          <text x="293" y="145" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(295,136)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(344,136)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="150" width="358" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="359" y1="168" y2="168" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="163" style="font:400 11px sans-serif">testResult</text>
+          <text x="255" y="163" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">ClassificationTestResult</text>
+          <text x="293" y="163" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(295,154)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(344,154)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="168" width="358" height="16" style="fill:#f3f4f6"/>
+          <text x="10" y="179" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">DEFAULTS</text>
+          <rect x="1" y="184" width="358" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="359" y1="202" y2="202" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,188)" aria-label="DEFAULT 1.0">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 1.0</title>
+          </g>
+          <text x="18" y="197" style="font:400 10px monospace;fill:#6b7280">1.0</text>
+          <rect x="1" y="202" width="358" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="359" y1="220" y2="220" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,206)" aria-label="DEFAULT 0.0">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT 0.0</title>
+          </g>
+          <text x="18" y="215" style="font:400 10px monospace;fill:#6b7280">0.0</text>
+          <rect x="1" y="220" width="358" height="18" style="fill:#f9fafb"/>
+          <line x1="1" x2="359" y1="238" y2="238" style="stroke:#f3f4f6;stroke-width:1"/>
+          <g transform="translate(3,224)" aria-label="DEFAULT mp_any">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#6b7280;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">D</text>
+            <title>DEFAULT mp_any</title>
+          </g>
+          <text x="18" y="233" style="font:400 10px monospace;fill:#6b7280">mp_any</text>
+          <path d="M327,53 L331,53 L331,193 L327,193" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="327" cy="53" r="1.60" style="fill:#6b7280"/>
+          <circle cx="327" cy="193" r="1.60" style="fill:#6b7280"/>
+          <path d="M327,71 L336,71 L336,211 L327,211" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="327" cy="71" r="1.60" style="fill:#6b7280"/>
+          <circle cx="327" cy="211" r="1.60" style="fill:#6b7280"/>
+          <path d="M327,89 L341,89 L341,229 L327,229" style="fill:none;stroke:#6b7280;stroke-width:1.4;stroke-linecap:round"/>
+          <circle cx="327" cy="89" r="1.60" style="fill:#6b7280"/>
+          <circle cx="327" cy="229" r="1.60" style="fill:#6b7280"/>
+        </g>
+      </g>
+      <g class="dv-node dv-c_1f9c9485" transform="translate(603.50,62)">
+        <rect class="dv-frame" x="0" y="0" width="325" height="132" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_1f9c9485">
+            <rect x="0" y="0" width="325" height="132" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_1f9c9485)">
+          <rect class="dv-title-bar" x="0" y="0" width="325" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="325" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMatrixEntry</text>
+          <rect x="1" y="28" width="323" height="16" style="fill:#dbeafe"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">ATTRIBUTES</text>
+          <rect x="1" y="44" width="323" height="18" style="fill:#eff6ff"/>
+          <line x1="1" x2="324" y1="62" y2="62" style="stroke:#dbeafe;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">value</text>
+          <text x="255" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Double</text>
+          <text x="293" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..1</text>
+          <rect x="1" y="62" width="323" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="73" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="78" width="323" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="324" y1="96" y2="96" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="91" style="font:400 11px sans-serif">columnIndex</text>
+          <text x="255" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="293" y="91" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(309,82)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="96" width="323" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="324" y1="114" y2="114" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="109" style="font:400 11px sans-serif">categoryMatrix</text>
+          <text x="255" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryMatrixObject</text>
+          <text x="293" y="109" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(295,100)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(309,100)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="114" width="323" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="324" y1="132" y2="132" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="127" style="font:400 11px sans-serif">rowIndex</text>
+          <text x="255" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="293" y="127" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(309,118)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_24b2e53b" transform="translate(966.50,114)">
+        <rect class="dv-frame" x="0" y="0" width="246" height="62" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_24b2e53b">
+            <rect x="0" y="0" width="246" height="62" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_24b2e53b)">
+          <rect class="dv-title-bar" x="0" y="0" width="246" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="246" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMatrixObject</text>
+          <rect x="1" y="28" width="244" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">entry</text>
+          <text x="190" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryMatrixEntry</text>
+          <text x="228" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(230,48)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_60ca607" transform="translate(999.50,322)">
+        <rect class="dv-frame" x="0" y="0" width="246" height="116" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_60ca607">
+            <rect x="0" y="0" width="246" height="116" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_60ca607)">
+          <rect class="dv-title-bar" x="0" y="0" width="246" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="246" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryMatrixTable</text>
+          <rect x="1" y="28" width="244" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">source</text>
+          <text x="190" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Class</text>
+          <text x="228" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(230,48)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="62" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">columnAttribute</text>
+          <text x="190" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="228" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(230,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">rowAttribute</text>
+          <text x="190" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="228" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(230,84)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="98" width="244" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="245" y1="116" y2="116" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="111" style="font:400 11px sans-serif">valueAttribute</text>
+          <text x="190" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Attribute</text>
+          <text x="228" y="111" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(230,102)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+      <g class="dv-node dv-c_734df10b" transform="translate(1381.83,949)">
+        <rect class="dv-frame" x="0" y="0" width="247" height="98" rx="4" ry="4"/>
+        <defs>
+          <clipPath id="dv-clip-c_734df10b">
+            <rect x="0" y="0" width="247" height="98" rx="4" ry="4"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#dv-clip-c_734df10b)">
+          <rect class="dv-title-bar" x="0" y="0" width="247" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+          <rect x="0" y="24" width="247" height="4" style="fill:#1e3a8a"/>
+          <g transform="translate(10,8)">
+            <rect x="1" y="1" width="10" height="10" style="fill:none;stroke:#f9fafb;stroke-width:1"/>
+            <line x1="1" y1="5" x2="11" y2="5" style="stroke:#f9fafb;stroke-width:0.8"/>
+          </g>
+          <text x="28" y="12" style="font:400 10px sans-serif;fill:#e5e7eb">Class</text>
+          <text class="dv-title" x="28" y="23" style="font:600 13px sans-serif;fill:#f9fafb">CategoryTaxonomy</text>
+          <rect x="1" y="28" width="245" height="16" style="fill:#bbf7d0"/>
+          <text x="10" y="39" style="font:600 9.0px sans-serif;fill:#374151;letter-spacing:0.5px">REFERENCES</text>
+          <rect x="1" y="44" width="245" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="246" y1="62" y2="62" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="57" style="font:400 11px sans-serif">categoryMap</text>
+          <text x="177" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">CategoryMap</text>
+          <text x="215" y="57" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(231,48)" aria-label="containment">
+            <path d="M6 1 L11 5 L6 9 L1 5 Z" style="fill:#1f2937;stroke:none"/>
+          </g>
+          <rect x="1" y="62" width="245" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="246" y1="80" y2="80" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="75" style="font:400 11px sans-serif">rootCategory</text>
+          <text x="177" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Category</text>
+          <text x="215" y="75" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">0..*</text>
+          <g transform="translate(231,66)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+          <rect x="1" y="80" width="245" height="18" style="fill:#f0fdf4"/>
+          <line x1="1" x2="246" y1="98" y2="98" style="stroke:#bbf7d0;stroke-width:1"/>
+          <text x="18" y="93" style="font:400 11px sans-serif">schema</text>
+          <text x="177" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">Schema</text>
+          <text x="215" y="93" text-anchor="end" style="font:400 10px monospace;fill:#6b7280">1..1</text>
+          <g transform="translate(217,84)" aria-label="transient">
+            <rect x="0.50" y="0.50" width="9" height="9" rx="1.50" ry="1.50" style="fill:#0891b2;stroke:#374151;stroke-width:0.7"/>
+            <text x="5" y="7.50" text-anchor="middle" style="font:700 7px sans-serif;fill:#fff">T</text>
+            <title>transient</title>
+          </g>
+          <g transform="translate(231,84)" aria-label="reference">
+            <path d="M3 1 L9 5 L3 9" style="fill:none;stroke:#1f2937;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path class="dv-edge" d="M952.50,2507 L982.50,2507" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M478,563 L488,563 L488,892 L498,892" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1302.50,983 L1397.83,983" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M260,2364 L260,2354 L488,2354 L488,2440 L802.75,2440 L802.75,2450" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M725.25,874 L725.25,864 L972.50,864 L972.50,2469 L1109,2469 L1109,2489" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M952.50,965 L982.50,965" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M478,983 L498,983" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M725.25,736 L725.25,726 L1142.50,726 L1142.50,908" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M260,2242 L260,2232 L488,2232 L488,2440 L802.75,2440 L802.75,2450" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M260,2460 L260,2440 L802.75,2440 L802.75,2450" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M260,2138 L260,2128 L488,2128 L488,2440 L802.75,2440 L802.75,2450" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M2194,744 L2204,744 L2204,2479 L962.50,2479 L962.50,1001 L982.50,1001" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1165.75,524 L1165.75,468 L1710.50,468 L1710.50,815 L1869.50,815 L1869.50,913" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M1302.50,581 L1380.50,581" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1661.50,599 L1720.50,599" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1661.50,617 L1700.50,617 L1700.50,599 L1720.50,599" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1506.50,825 L1506.50,815 L1869.50,815 L1869.50,913" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M1690.50,343 L1700.50,343 L1700.50,599 L1720.50,599" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M952.50,169 L962.50,169 L962.50,109 L1700.50,109 L1700.50,599 L1720.50,599" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M952.50,187 L982.50,187" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M952.50,205 L962.50,205 L962.50,479 L1700.50,479 L1700.50,599 L1720.50,599" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1109.50,130 L1109.50,120 L1312.50,120 L1312.50,206 L1506.50,206 L1506.50,216" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M1142.50,338 L1142.50,206 L1506.50,206 L1506.50,216" style="stroke:#374151;" marker-end="url(#dv-deco-triangle-hollow)"/>
+    <path class="dv-edge" d="M1652.83,1022 L1720.50,1022" style="stroke:#374151;"/>
+    <path class="dv-edge" d="M1652.83,1040 L1700.50,1040 L1700.50,599 L1720.50,599" style="stroke:#374151;"/>
+  </g>
+</svg>

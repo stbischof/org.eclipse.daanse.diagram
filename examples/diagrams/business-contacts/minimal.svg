@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1009" height="229" viewBox="0 0 1009 229">
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+.dv-node rect.dv-frame { fill: #fff; stroke: #374151; stroke-width: 1; }
+.dv-node .dv-title { font: 600 13px sans-serif; fill: #111827; }
+.dv-node .dv-sub { font: 400 10px sans-serif; fill: #6b7280; }
+.dv-edge { fill: none; stroke: #374151; stroke-width: 1.2; }
+.dv-edge.fk { stroke: #334155; }
+.dv-edge.inherit { stroke: #16a34a; }
+.dv-edge.dep { stroke: #6b7280; stroke-dasharray: 4 3; }
+.dv-label { font: 400 10px sans-serif; fill: #334155; }
+.dv-cardinality { font: 400 10px sans-serif; fill: #1e293b; }
+.dv-cardinality-bg { fill: #ffffff; }
+
+]]>
+    </style>
+    <marker id="dv-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-arrow-fk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="dv-tri" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#16a34a"/>
+    </marker>
+    <marker id="dv-deco-open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 M0,12 L12,6" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-closed-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-triangle-hollow" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-triangle-filled" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-diamond-hollow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+    </marker>
+    <marker id="dv-deco-diamond-filled" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M0,6 L6,0 L12,6 L6,12 z" fill="#374151"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M12,6 L0,0 M12,6 L0,12 M12,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-one" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="8" markerHeight="11" orient="auto-start-reverse">
+      <path d="M6,0 L6,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+    </marker>
+    <marker id="dv-deco-crows-foot-many-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="14" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M7,6 L0,0 M7,6 L0,12 M7,6 L0,6" fill="none" stroke="#374151" stroke-width="1.30"/>
+      </g>
+    </marker>
+    <marker id="dv-deco-crows-foot-one-opt" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="11" orient="auto-start-reverse">
+      <g>
+        <circle cx="9.50" cy="6" r="2" fill="#fff" stroke="#374151" stroke-width="1.20"/>
+        <path d="M5,0 L5,12" fill="none" stroke="#374151" stroke-width="1.40"/>
+      </g>
+    </marker>
+  </defs>
+  <g class="diagramvis-body" transform="translate(-4.0,-4.0)">
+    <g class="dv-node dv-bi_62ea3440" transform="translate(20,163)">
+      <rect class="dv-frame" x="0" y="0" width="200" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="200" height="28" rx="4" ry="4" style="fill:#1e3a8a"/>
+      <rect x="0" y="24" width="200" height="4" style="fill:#1e3a8a"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M6 1a2 2 0 1 1 0 4a2 2 0 1 1 0-4zM2 11c0-2 2-4 4-4s4 2 4 4z" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">RESPONSIBLE PARTY</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">Sales Operations</text>
+    </g>
+    <g class="dv-node dv-bi_27953a83" transform="translate(440.75,172)">
+      <rect class="dv-frame" x="0" y="0" width="200" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="200" height="28" rx="4" ry="4" style="fill:#312e81"/>
+      <rect x="0" y="24" width="200" height="4" style="fill:#312e81"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M1 2h10v8H1zM3 4h6M3 6h6M3 8h4" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">CONTACT</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">Jane Doe</text>
+    </g>
+    <g class="dv-node dv-bi_556d0826" transform="translate(797,105)">
+      <rect class="dv-frame" x="0" y="0" width="200" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="200" height="28" rx="4" ry="4" style="fill:#0e7490"/>
+      <rect x="0" y="24" width="200" height="4" style="fill:#0e7490"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M1 3h10v6H1zM1 3l5 4l5-4" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">EMAIL</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">primary mail</text>
+    </g>
+    <g class="dv-node dv-bi_66ce957f" transform="translate(797,181)">
+      <rect class="dv-frame" x="0" y="0" width="200" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="200" height="28" rx="4" ry="4" style="fill:#0e7490"/>
+      <rect x="0" y="24" width="200" height="4" style="fill:#0e7490"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M3 1l2 2l-1 2c1 2 2 3 4 4l2-1l2 2l-1 2c-4 0-9-5-9-9z" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">TELEPHONE</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">office line</text>
+    </g>
+    <g class="dv-node dv-bi_55b5f5d2" transform="translate(797,29)">
+      <rect class="dv-frame" x="0" y="0" width="200" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="200" height="28" rx="4" ry="4" style="fill:#0e7490"/>
+      <rect x="0" y="24" width="200" height="4" style="fill:#0e7490"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M6 1c-2.5 0-4 1.8-4 4c0 3 4 6 4 6s4-3 4-6c0-2.2-1.5-4-4-4zM6 3a1.5 1.5 0 1 1 0 3a1.5 1.5 0 1 1 0-3" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">LOCATION</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">HQ</text>
+    </g>
+    <g class="dv-node dv-bi_5bfa8cc5" transform="translate(431,96)">
+      <rect class="dv-frame" x="0" y="0" width="200" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="200" height="28" rx="4" ry="4" style="fill:#7c2d12"/>
+      <rect x="0" y="24" width="200" height="4" style="fill:#7c2d12"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M2 1h8v10H2zM3 3h6M3 5h6M3 7h6M3 9h4" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">DESCRIPTION</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">Catalog purpose</text>
+    </g>
+    <g class="dv-node dv-bi_666b83a4" transform="translate(431,20)">
+      <rect class="dv-frame" x="0" y="0" width="213" height="36" rx="4" ry="4"/>
+      <rect x="0" y="0" width="213" height="28" rx="4" ry="4" style="fill:#374151"/>
+      <rect x="0" y="24" width="213" height="4" style="fill:#374151"/>
+      <circle cx="14" cy="14" r="9" style="fill:#ffffff;fill-opacity:0.18;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1"/>
+      <g transform="translate(8,8.0)">
+        <path d="M2 1h6l3 3v7H2zM8 1v3h3M3 6h6M3 8h6" style="fill:#ffffff;stroke:none"/>
+      </g>
+      <text x="28" y="12" style="font:600 9px sans-serif;fill:#ffffff;letter-spacing:0.5px;opacity:0.85">DOCUMENT</text>
+      <text x="28" y="23" style="font:600 13px sans-serif;fill:#ffffff">Operations runbook</text>
+    </g>
+    <path class="dv-edge" d="M220,190 L440.75,190" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="282" y="213" style="fill:#374151">responsible for</text>
+    <path class="dv-edge" d="M220,181 L240,181 L240,114 L431,114" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="282" y="137" style="fill:#374151">responsible for</text>
+    <path class="dv-edge" d="M220,172 L230,172 L230,38 L431,38" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="282" y="61" style="fill:#374151">responsible for</text>
+    <path class="dv-edge" d="M640.75,190 L664,190 L664,123 L797,123" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="706" y="146" style="fill:#374151">email</text>
+    <path class="dv-edge" d="M640.75,199 L797,199" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="711.80" y="222" style="fill:#374151">tel</text>
+    <path class="dv-edge" d="M640.75,181 L654,181 L654,47 L797,47" marker-end="url(#dv-arrow)"/>
+    <text class="dv-label" x="711.80" y="70" style="fill:#374151">loc</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.eclipse.daanse</groupId>
+    <artifactId>org.eclipse.daanse.diagram</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+  <artifactId>org.eclipse.daanse.diagram.kind.cwm</artifactId>
+  <packaging>pom</packaging>
+  <name>Eclipse Daanse Diagram Kind CWM Aggregator</name>
+  <description>Mirrors the OMG CWM 1.1 package hierarchy: ObjectModel,
+        Foundation, Resource, Analysis, Management.</description>
+  <modules>
+    <module>org.eclipse.daanse.diagram.kind.cwm.objectmodel</module>
+    <module>org.eclipse.daanse.diagram.kind.cwm.foundation</module>
+    <module>org.eclipse.daanse.diagram.kind.cwm.resource</module>
+    <module>org.eclipse.daanse.diagram.kind.cwm.analysis</module>
+    <module>org.eclipse.daanse.diagram.kind.cwm.management</module>
+  </modules>
+</project>

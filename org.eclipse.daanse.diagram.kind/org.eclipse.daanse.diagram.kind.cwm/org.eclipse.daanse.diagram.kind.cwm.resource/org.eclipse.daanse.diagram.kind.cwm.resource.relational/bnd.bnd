@@ -1,0 +1,4 @@
+Bundle-Name: ${project.name}
+Bundle-SymbolicName: ${project.artifactId}
+Export-Package: \
+    org.eclipse.daanse.diagram.kind.cwm.resource.relational

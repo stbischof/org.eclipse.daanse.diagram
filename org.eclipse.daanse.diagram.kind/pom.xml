@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.eclipse.daanse</groupId>
+    <artifactId>org.eclipse.daanse.diagram</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>org.eclipse.daanse.diagram.kind</artifactId>
+  <packaging>pom</packaging>
+  <name>Eclipse Daanse Diagram Kind Aggregator</name>
+  <description>Aggregator that groups every concrete diagram kind:
+        DB schema, CWM relational, CWM record, Ecore, and the RoLAP family
+        (access, cube, dimension, level).</description>
+  <modules>
+    <module>org.eclipse.daanse.diagram.kind.cwm</module>
+    <module>org.eclipse.daanse.diagram.kind.ecore</module>
+    <module>org.eclipse.daanse.diagram.kind.rolap</module>
+  </modules>
+
+    <!-- Single jar module per diagram kind. The RoLAP family is one
+         jar (`…kind.rolap`) that contains four Java sub-packages
+         (`.access`, `.cube`, `.dimension`, `.level`). -->
+
+</project>
